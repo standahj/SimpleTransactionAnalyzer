@@ -1,5 +1,5 @@
 # Simple Transaction Analyzer
-Hoolah test.
+A test application to simulate simple payment processor and analyzer.
 
 ## Installation
 
@@ -63,3 +63,11 @@ Number of Transactions = 5
 
 # Design notes
 
+Emphasis during the design was on code reuse & performance.
+the class TransationAnalyzer is responsible for finding the range of transaction
+that fit the specified start / end timestamp criteria, and for each record
+calls the provided AnalyzerFunction that does the aggregation (e.g calculates the average on applicable records, or determines min/max value).
+The Analyzer value is for now implemented as Consumer<T> because
+it is not expected that the functions will be chained (i.e output of one AnalyzerFunction is not going to be used as input to another).
+If that would be the case, I'd use a Function<T, R> instead, returning posssibly modified
+TransactionRecord that may then used as input to next function in the chain. 
