@@ -5,6 +5,12 @@ A test application to simulate simple payment processor and analyzer.
 
 Requires Java 8, Gradle.
 
+## Assumptions
+
+1) The data set in the CSV files is ordered by time and complete
+2) Timestamp format is dd/MM/yyyy HH:mm:ss  (i.e day/month/4-digit-year hours24:minute:second  - using 24hour format, not AM/PM)
+3) TimeZone is the system default, however it may be adjusted by providing a Java startup argument -Duser.timezone=<timezone>,  e.g. -Duser.timezone=EST
+
 ## Usage
 
 Build it with Gradle command:

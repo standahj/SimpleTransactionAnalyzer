@@ -26,7 +26,7 @@ import java.util.Map;
  */
 public class SimpleTransactionAnalyzer {
 
-    public static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd/MM/yyyy hh:mm:ss");
+    public static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 
     private CommandLine m_commandLine   = null;
 
