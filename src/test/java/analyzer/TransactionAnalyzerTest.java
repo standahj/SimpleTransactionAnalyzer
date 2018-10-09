@@ -48,7 +48,7 @@ public class TransactionAnalyzerTest {
         long dateTo = DATE_FORMAT.parse("20/08/2018 13:00:00").getTime();
         Map<String,Object> result = analyzer.analyze(dateFrom, dateTo);
         assertThat(result.get("ERROR"), is("date-from parameter must be before date-to. Actual requested range is from: " +
-                "20/08/2019 12:00:00 to: 20/08/2018 01:00:00"));
+                "20/08/2019 12:00:00 to: 20/08/2018 13:00:00"));
     }
 
     @Test
