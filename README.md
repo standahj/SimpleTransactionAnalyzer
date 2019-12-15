@@ -1,5 +1,9 @@
 # Simple Transaction Analyzer
 A test application to simulate simple payment processor and analyzer.
+Given the list transaction, and the analysis time frame, the tool must produce the average amount of transactions in given
+time range and/or minimum  and maximum transaction  value.
+If there is a reversed transaction in the given analysis timeframe, the reversed transaction must not be included in the 
+calculated output result. 
 
 ## Installation
 
